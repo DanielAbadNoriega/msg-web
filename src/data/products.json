@@ -12,7 +12,7 @@
       "dietaryFibre": 13,
       "sodium": 6
     },
-    "tags": ["grain", "carb"]
+    "tags": "grain"
   },
   {
     "id": "coles-rolled-oats-wholegrain",
@@ -28,7 +28,7 @@
       "sodium": 7,
       "potassium": 313
     },
-    "tags": ["grain", "carb"]
+    "tags": "carb"
   },
   {
     "id": "sanitarium-almond-milk",
@@ -48,7 +48,7 @@
       "calcium": 75,
       "vitamin-e": 0.4
     },
-    "tags": ["snack"]
+    "tags": "snack"
   },
   {
     "id": "coles-soy-milk-regular",
@@ -65,7 +65,7 @@
       "sugars": 1.6,
       "sodium": 47
     },
-    "contains": ["canola-oil", "maltodextrin"]
+    "tags": "snack"
   },
   {
     "id": "simply-better-organic-tofu-plain-firm",
@@ -81,7 +81,8 @@
       "carbohydrate": 0.3,
       "sugars": 0.3,
       "sodium": 17
-    }
+    },
+    "tags": "snack"
   },
   {
     "id": "sss-hummus-dip",
@@ -96,7 +97,7 @@
       "sugars": 0.6,
       "sodium": 378
     },
-    "tags": ["legume", "snack"]
+    "tags": "legume"
   },
   {
     "id": "coles-hummus-lite",
@@ -110,7 +111,7 @@
       "sugars": 0.6,
       "sodium": 354
     },
-    "tags": ["legume", "snack"]
+    "tags": "legume"
   },
   {
     "id": "coles-hummus",
@@ -124,7 +125,7 @@
       "sugars": 0.6,
       "sodium": 347
     },
-    "tags": ["legume", "snack"]
+    "tags": "legume"
   },
   {
     "id": "sanitarium-natural-peanut-butter-crunchy",
@@ -145,7 +146,7 @@
       "vitamin-b3": 12,
       "magnesium": 150
     },
-    "tags": ["snack", "nut"]
+    "tags": "snack"
   },
   {
     "id": "macro-organic-peanut-butter-crunchy",
@@ -162,7 +163,7 @@
       "sugars": 5.5,
       "sodium": 1
     },
-    "tags": ["snack", "nut"]
+    "tags": "snack"
   },
   {
     "id": "macro-organic-tahini-unhulled",
@@ -179,7 +180,7 @@
       "sugars": 1,
       "sodium": 7
     },
-    "tags": ["seed"]
+    "tags": "seed"
   },
   {
     "id": "coles-butter-beans-organic",
@@ -194,7 +195,7 @@
       "dietaryFibre": 7,
       "sodium": 300
     },
-    "tags": ["legume"]
+    "tags": "legume"
   },
   {
     "id": "coles-red-kidney-beans-organic",
@@ -209,7 +210,7 @@
       "dietaryFibre": 7.3,
       "sodium": 268
     },
-    "tags": ["legume"]
+    "tags": "legume"
   },
   {
     "id": "coles-chick-peas-organic",
@@ -224,7 +225,7 @@
       "dietaryFibre": 7,
       "sodium": 295
     },
-    "tags": ["legume"]
+    "tags": "legume"
   },
   {
     "id": "coles-lentils",
@@ -239,7 +240,7 @@
       "dietaryFibre": 2.8,
       "sodium": 293
     },
-    "tags": ["legume"]
+    "tags": "legume"
   },
   {
     "id": "edgell-cannellini-beans",
@@ -254,7 +255,7 @@
       "dietaryFibre": 5.6,
       "sodium": 298
     },
-    "tags": ["legume"]
+    "tags": "legume"
   },
   {
     "id": "fruit-kiwifruit-fresh-raw",
@@ -267,7 +268,7 @@
       "fat": 0.52,
       "protein": 1.14
     },
-    "tags": ["fruit"]
+    "tags": "fruit"
   },
   {
     "id": "fruit-apple-granny-smith-fresh-raw",
@@ -293,7 +294,7 @@
       "potassium": 107,
       "zinc": 0.04
     },
-    "tags": ["fruit"]
+    "tags": "fruit"
   },
   {
     "id": "fruit-apple-pink-lady-fresh-raw",
@@ -306,7 +307,7 @@
       "fat": 0.17,
       "protein": 0.26
     },
-    "tags": ["fruit"]
+    "tags": "fruit"
   },
   {
     "id": "fruit-banana-fresh-raw",
@@ -322,7 +323,7 @@
       "vitamin-c": 8.7,
       "manganese": 0.3
     },
-    "tags": ["fruit"]
+    "tags": "fruit"
   },
   {
     "id": "fruit-orange-navel-fresh-raw",
@@ -336,7 +337,7 @@
       "protein": 0.94,
       "vitamin-c": 53.2
     },
-    "tags": ["fruit"]
+    "tags": "fruit"
   },
   {
     "id": "fruit-avocado-fresh",
@@ -361,7 +362,7 @@
       "vitamin-k": 21,
       "potassium": 485
     },
-    "tags": ["vegetable", "superfood"]
+    "tags": "superfood"
   },
   {
     "id": "veg-broccoli-fresh",
@@ -381,7 +382,7 @@
       "vitamin-k": 101.6,
       "manganese": 0.21
     },
-    "tags": ["vegetable", "leafy green vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-spinach-fresh",
@@ -406,7 +407,7 @@
       "manganese": 0.897,
       "potassium": 558
     },
-    "tags": ["vegetable", "leafy green vegetable", "superfood"]
+    "tags": "superfood"
   },
   {
     "id": "veg-baby-spinach-leaves-fresh",
@@ -431,7 +432,7 @@
       "manganese": 0.897,
       "potassium": 558
     },
-    "tags": ["vegetable", "leafy green vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-bok-choy-fresh",
@@ -446,7 +447,7 @@
       "vitamin-c": 45,
       "calcium": 105
     },
-    "tags": ["vegetable", "leafy green vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-brussels-sprout-raw",
@@ -466,7 +467,7 @@
       "manganese": 0.337,
       "phosphorus": 69
     },
-    "tags": ["vegetable", "leafy green vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-sweet-potato-fresh",
@@ -484,7 +485,7 @@
       "vitamin-b6": 0.209,
       "manganese": 0.258
     },
-    "tags": ["vegetable", "superfood"]
+    "tags": "superfood"
   },
   {
     "id": "veg-eggplant-fresh",
@@ -498,7 +499,7 @@
       "protein": 0.98,
       "manganese": 0.232
     },
-    "tags": ["vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-mushrooms-cup-fresh",
@@ -515,7 +516,7 @@
       "potassium": 448,
       "zinc": 1.1
     },
-    "tags": ["vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-cucumber-continental-fresh",
@@ -529,7 +530,7 @@
       "protein": 0.65,
       "vitamin-k": 16.4
     },
-    "tags": ["vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "veg-capsicum-red-fresh",
@@ -544,7 +545,7 @@
       "vitamin-b6": 0.224,
       "vitamin-c": 80.4
     },
-    "tags": ["vegetable"]
+    "tags": "vegetable"
   },
   {
     "id": "coles-dried-apricots",
@@ -559,7 +560,7 @@
       "dietaryFibre": 7.5,
       "sodium": 0.35
     },
-    "tags": ["fruit"]
+    "tags": "fruit"
   },
   {
     "id": "coles-almonds-natural",
@@ -578,7 +579,7 @@
       "sodium": 4.5,
       "vitamin-e": 26.7
     },
-    "tags": ["nut", "superfood"]
+    "tags": "superfood"
   },
   {
     "id": "coles-walnuts-natural-californian",
@@ -596,7 +597,7 @@
       "sodium": 0.8,
       "magnesium": 180
     },
-    "tags": ["nut"]
+    "tags": "nut"
   },
   {
     "id": "coles-cashews-salted",
@@ -610,7 +611,7 @@
       "sugars": 6.7,
       "sodium": 300
     },
-    "tags": ["nut"]
+    "tags": "nut"
   },
   {
     "id": "coles-flaxseed",
@@ -626,7 +627,7 @@
       "dietaryFibre": 27.3,
       "sodium": 66
     },
-    "tags": ["seed"]
+    "tags": "seed"
   },
   {
     "id": "seed-pumpkin-dried",
@@ -649,7 +650,7 @@
       "sodium": 7,
       "zinc": 7.81
     },
-    "tags": ["seed"]
+    "tags": "seed"
   },
   {
     "id": "mission-wraps-wholegrain",
@@ -667,7 +668,7 @@
       "dietaryFibre": 4.6,
       "sodium": 960
     },
-    "tags": ["carb", "bread"]
+    "tags": "carb"
   },
   {
     "id": "sanremo-wholegrain-pasta",
@@ -682,7 +683,7 @@
       "dietaryFibre": 13,
       "sodium": 30
     },
-    "tags": ["carb", "bread"]
+    "tags": "carb"
   },
   {
     "id": "sunrice-brown-rice-uncooked",
@@ -703,7 +704,7 @@
       "vitamin-b3": 6.4,
       "magnesium": 111
     },
-    "tags": ["carb", "grain"]
+    "tags": "grain"
   },
   {
     "id": "pureharvest-organic-rice-cakes",
@@ -722,7 +723,7 @@
       "sodium": 222,
       "calcium": 13
     },
-    "tags": ["carb", "snack"]
+    "tags": "snack"
   },
   {
     "id": "arnotts-vita-wheat-rice-crackers-multigrain",
@@ -737,7 +738,7 @@
       "sugars": 0.6,
       "dietaryFibre": 3
     },
-    "tags": ["carb", "snack"]
+    "tags": "snack"
   },
   {
     "id": "supl-protein-pea-rice-mix",
@@ -748,7 +749,7 @@
       "carbohydrate": 3.8,
       "fat": 1.05
     },
-    "tags": ["supplement"]
+    "tags": "supplement"
   },
   {
     "id": "sweet-william-choc-original",
@@ -766,7 +767,7 @@
       "dietaryFibre": 6,
       "sodium": 5.4
     },
-    "tags": ["snack", "carb"]
+    "tags": "snack"
   },
   {
     "id": "red-rock-chips-chilli-salt",
@@ -785,6 +786,6 @@
       "sodium": 579,
       "potassium": 1220
     },
-    "tags": ["snack", "carb"]
+    "tags": "snack"
   }
 ]

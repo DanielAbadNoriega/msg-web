@@ -25,10 +25,7 @@ function Product({ name, nutritionPerHundred, tags, id }) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
           quam malesuada, malesuada est id, aliquam odio. Pellentesque ornare
           urna fringilla magna molestie varius. Nunc bibendum sapien consectetur
-          rhoncus tempor. Sed nisl lectus, euismod ut posuere quis, tincidunt
-          interdum ligula. Phasellus rutrum lectus non iaculis hendrerit.
-          Aliquam at imperdiet ipsum, a sollicitudin augue. Aliquam quis
-          elementum lorem. Nullam tempor massa vitae ante efficitur ullamcorper.
+          rhoncus tempor.
         </p>
 
         <h5 className="card-title">Nutrition per hundred:</h5>
@@ -103,8 +100,8 @@ function Product({ name, nutritionPerHundred, tags, id }) {
           </p>
         )}
 
-        <h5 className="card-title">Tags: </h5>
-        {tags && tags.map((tag) => <ul className="card-text mt-1">- {tag}</ul>)}
+        {/* <h5 className="card-title">Tags: </h5>
+        {tags && tags.map((tag) => <ul className="card-text mt-1">- {tag}</ul>)} */}
         <a href="/" className="card-link">
           Deteail
         </a>
