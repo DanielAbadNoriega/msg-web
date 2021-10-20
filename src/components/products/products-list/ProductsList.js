@@ -15,12 +15,11 @@ function ProductsList() {
   return (
     <div className="container">
       <h3>Products List</h3>
+      <ProductsFilter onFilter={filter} />
       <div className="row col-12">
-        <ProductsFilter onFilter={filter} />
-
         {products &&
           products
-            .filter((product) => tag ?  (product.tags === tag) : product)
+            .filter((product) => (tag ? product.tags === tag : product))
             .map((product) => <Product {...product} key={product.id} />)}
       </div>
     </div>

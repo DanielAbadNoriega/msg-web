@@ -6,13 +6,11 @@ function RecipesList() {
   const recipes = recipesData;
   return (
     <div className="container">
-      <h3>Recipes List</h3>
-      {recipes && recipes.map(recipe => 
-        <Recipe 
-          {...recipe}
-          key={recipe.id}
-        />
-      )}
+      <h3 >Recipes List</h3>
+      <div className="card-group col-12">
+        {recipes &&
+          recipes.map((recipe) => <Recipe {...recipe} key={recipe.id} />)}
+      </div>
     </div>
   );
 }

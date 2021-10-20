@@ -4,12 +4,14 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <NavLink className="navbar-brand" exact to="/">
+      <div className="container-fluid col-12">
+        <NavLink className="navbar-brand col-1 me-5" exact to="/">
           Mejor Sin Gluten
         </NavLink>
+
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
+          {/* Home */}
+          <li className="nav-item col-4 me-4">
             <NavLink
               className="nav-link"
               aria-current="page"
@@ -20,10 +22,11 @@ function Navbar() {
                 color: "black",
               }}
             >
-              Home
+              <i className="fa fa-home fa-fw" aria-hidden="true"></i>
             </NavLink>
           </li>
-          <li className="nav-item dropdown">
+          {/* Dropdown */}
+          <li className="nav-item dropdown col-2 me-4">
             <NavLink
               className="nav-link dropdown-toggle"
               exact
@@ -33,7 +36,7 @@ function Navbar() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+              <i className="fa fa-bars fa-fw" aria-hidden="true"></i>
             </NavLink>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
@@ -72,6 +75,7 @@ function Navbar() {
             </ul>
           </li>
         </ul>
+        {/* Search */}
         <form className="d-flex">
           <input
             className="form-control me-2"

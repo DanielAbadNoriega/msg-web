@@ -21,7 +21,7 @@ function ProductsFilter(props) {
         >
           Filter
         </button>
-        <ul className="dropdown-menu">
+        <ul className="dropdown-menu shadow-sm p-0">
           {tags.map((tag) => (
             <li>
               {" "}
