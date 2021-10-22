@@ -6,7 +6,6 @@ function Rating() {
   }
 
   const starRand = random()
-  console.log(starRand)
 
   return (
     <div className="container">

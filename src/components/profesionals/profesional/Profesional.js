@@ -17,7 +17,7 @@ function Profesional({ name, email, phone, avatar, address, company }) {
             </p>            
             <p className="card-text">
               <b>About us: </b>
-              <small class="text-muted">{company.bs}</small>
+              <small className="text-muted">{company.bs}</small>
             </p>
             <Rating />
           </div>

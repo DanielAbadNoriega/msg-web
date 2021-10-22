@@ -6,8 +6,8 @@ function ShopsList() {
   const shops = shopsData;
 
   return (
-    <div className="container">
-      <h3>Shops List</h3>
+    <div className="container mt-5">
+      <h3 className="text-white">Shops List</h3>
       <div className="row">
         {shops && shops.map((shop) => <Shop {...shop} key={shop.id} />)}
       </div>

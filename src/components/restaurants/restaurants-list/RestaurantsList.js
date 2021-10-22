@@ -5,7 +5,7 @@ import restaurantsData from "../../../data/restaurants.json";
 function RestaurantsList() {
   const restaurants = restaurantsData;
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h3>Restaurants List</h3>
       <div className="row">
         {restaurants &&

@@ -5,8 +5,8 @@ import profesionalsData from "../../../data/profesionals.json";
 function ProfesionalsList() {
   const profesionals = profesionalsData;
   return (
-    <div className="container">
-      <h3>Profesionals List</h3>
+    <div className="container mt-5">
+      <h3 className="text-white">Profesionals List</h3>
       <div className="row">
         {profesionals && profesionals.map(profesional => (
           <Profesional 

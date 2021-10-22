@@ -13,7 +13,7 @@ function ProductsList() {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h3>Products List</h3>
       <ProductsFilter onFilter={filter} />
       <div className="row col-12">
