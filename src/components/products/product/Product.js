@@ -2,6 +2,7 @@ import React from "react";
 import Rating from "../../rating/Rating";
 import ProductDetail from "../product-detail/ProductDetail";
 
+
 function Product({ name, nutritionPerHundred, tags, id }) {
   return (
     <div className="card mt-2 shadow p-3 mb-2 col-12">

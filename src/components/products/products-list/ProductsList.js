@@ -4,9 +4,10 @@ import Product from "../product/Product";
 import ProductsFilter from "../products-filter/ProductsFilter";
 
 function ProductsList() {
+  //const [products, setProducts] = useState(null);
+  const [tag, setTag] = useState("");
   const products = productsData;
 
-  const [tag, setTag] = useState("");
 
   const filter = (tag) => {
     setTag(tag);
@@ -14,13 +15,15 @@ function ProductsList() {
 
   return (
     <div className="container mt-5">
-      <h3>Products List</h3>
-      <ProductsFilter onFilter={filter} />
+      <div className="row col-12">
+        <h3 className="text-white">Products List</h3>
+        <ProductsFilter onFilter={filter} />
+      </div>
       <div className="row col-12">
         {products &&
           products
             .filter((product) => (tag ? product.tags === tag : product))
-            .map((product) => <Product {...product} key={product.id} />)}
+            .map((product) => <Product key={product.id} {...product}  />)}
       </div>
     </div>
   );

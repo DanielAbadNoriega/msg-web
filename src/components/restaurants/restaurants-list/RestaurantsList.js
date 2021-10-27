@@ -6,7 +6,7 @@ function RestaurantsList() {
   const restaurants = restaurantsData;
   return (
     <div className="container mt-5">
-      <h3>Restaurants List</h3>
+      <h3 className="text-white">Restaurants List</h3>
       <div className="row">
         {restaurants &&
           restaurants.map((restaurant) => (

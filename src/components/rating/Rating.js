@@ -14,6 +14,7 @@ function Rating() {
           style={{color: star <= starRand ? "#ffd700" : "#8a9597"}}
           className="fa fa-star me-1 shadow-sm p-3 mb-2 "
           aria-hidden="true"
+          key={star}
         ></i>
       ))}
     </div>
