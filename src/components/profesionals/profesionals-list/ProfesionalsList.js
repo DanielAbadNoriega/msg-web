@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Profesional from "../profesional/Profesional";
-import profesionalsData from "../../../data/profesionals.json";
+import profesionalsService from "../../../services/profesionals-service"
 
 function ProfesionalsList() {
-  const profesionals = profesionalsData;
+  const [ profesionals, setProfesionals ] = useState(null)
+
+  useEffect(() => {
+    profesionalsService.list()
+      .then(data => setProfesionals(data))
+      .catch(error => console.log(error))
+  }, [])
+
   return (
     <div className="container mt-5">
       <h3 className="text-white">Profesionals List</h3>
       <div className="row">
         {profesionals && profesionals.map(profesional => (
           <Profesional 
-            {...profesional}
             key={profesional.id}
+            {...profesional}
           />
         ))}
       </div>

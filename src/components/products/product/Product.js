@@ -3,7 +3,7 @@ import Rating from "../../rating/Rating";
 import ProductDetail from "../product-detail/ProductDetail";
 
 
-function Product({ name, nutritionPerHundred, tags, id }) {
+function Product({ name, nutritionPerHundred }) {
   return (
     <div className="card mt-2 shadow p-3 mb-2 col-12">
       <div className="card-body col-12">

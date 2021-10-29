@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Restaurant from "../restaurant/Restaurant";
-import restaurantsData from "../../../data/restaurants.json";
+import restaurantsService from "../../../services/restaurants-service"
 
 function RestaurantsList() {
-  const restaurants = restaurantsData;
+
+  const [ restaurants, setRestaurants ] = useState(null)
+
+  useEffect(() => {
+    restaurantsService.list()
+      .then(data => setRestaurants(data))
+      .catch(error => console.error(error))
+  }, [])
+
   return (
     <div className="container mt-5">
       <h3 className="text-white">Restaurants List</h3>

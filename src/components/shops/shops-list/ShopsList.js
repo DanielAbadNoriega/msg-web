@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Shop from "../shop/Shop";
-import shopsData from "../../../data/shop.json";
+import shopsService from "../../../services/shops-service"
 
 function ShopsList() {
-  const shops = shopsData;
+  const [ shops, setShops ] = useState(null)
+
+  useEffect(() => {
+    shopsService.list()
+      .then(data => setShops(data))
+      .catch(error => console.log(error))
+  }, [])
 
   return (
     <div className="container mt-5">

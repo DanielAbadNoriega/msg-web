@@ -23,7 +23,7 @@ function ProductsFilter(props) {
         </button>
         <ul className="dropdown-menu shadow-sm p-0">
           {tags.map((tag) => (
-            <li>
+            <li key={tag}>
               {" "}
               <button
                 onClick={() => {

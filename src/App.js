@@ -5,6 +5,7 @@ import Regist from "./components/misc/regist/Regist";
 import Navbar from "./components/navbar/Navbar";
 import ProductsList from "./components/products/products-list/ProductsList";
 import ProfesionalsList from "./components/profesionals/profesionals-list/ProfesionalsList";
+import RecipeDetails from "./components/recipes/recipe-details/RecipeDetails";
 import RecipesList from "./components/recipes/recipes-list/RecipesList";
 import RestaurantsList from "./components/restaurants/restaurants-list/RestaurantsList";
 import ShopsList from "./components/shops/shops-list/ShopsList";
@@ -12,25 +13,32 @@ import ShopsList from "./components/shops/shops-list/ShopsList";
 function App() {
   return (
     <div className="App">
-      <div>
-        <Navbar />
+      <Navbar />
 
-        <Switch>
-          <Route exact path="/home" component={Home} />
+      <Switch>
+        {/* Home */}
+        <Route exact path="/home" component={Home} />
 
-          <Route exact path="/products" component={ProductsList} />
+        {/* Products */}
+        <Route exact path="/products" component={ProductsList} />
 
-          <Route exact path="/profesionals" component={ProfesionalsList} />
+        {/* Profesionals */}
+        <Route exact path="/profesionals" component={ProfesionalsList} />
 
-          <Route exact path="/recipes" component={RecipesList} />
+        {/* Recipes */}
+        <Route exact path="/recipes" component={RecipesList} />
 
-          <Route exact path="/restaurants" component={RestaurantsList} />
+        <Route exact path="/recipes/:id" component={RecipeDetails} />
 
-          <Route exact path="/shops" component={ShopsList} />
+        {/* Restaurants */}
+        <Route exact path="/restaurants" component={RestaurantsList} />
 
-          <Route exact path="/login" component={Regist} />
-        </Switch>
-      </div>
+        {/* Shops */}
+        <Route exact path="/shops" component={ShopsList} />
+
+        {/* Regist/Login */}
+        <Route exact path="/login" component={Regist} />
+      </Switch>
     </div>
   );
 }

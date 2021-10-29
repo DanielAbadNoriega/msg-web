@@ -61,7 +61,7 @@ function RecipesList() {
       <div className="container mt-5 col-12">
         <h3 className="text-black">Recipes List</h3>
         <div className="row justify-content-center col-12">
-          <div className="card col-6 border-0 bg-transparent">
+          <div className="card col-4 border-0 bg-transparent">
             {loading ? (
               <i className="fa fa-gear fa-spin"></i>
             ) : (

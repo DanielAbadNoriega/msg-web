@@ -1,4 +1,18 @@
-function RecipeModal({ingredients}) {
+import { useState, useEffect } from "react";
+import recipesService from "../../../services/recipes-service";
+
+function RecipeDetails(recipeId) {
+  
+  const [recipe, setRecipe] = useState();
+
+  useEffect(() => {
+    recipesService
+      .detail(recipeId.recipeId)
+      .then((recipe) => setRecipe(recipe))
+      .catch((error) => console.error(error));
+  },[recipeId.recipeId]);
+
+  
   return (
     <div>
       {/* Prueba Modal */}
@@ -7,22 +21,22 @@ function RecipeModal({ingredients}) {
         type="button"
         className="btn btn-success"
         data-bs-toggle="modal"
-        data-bs-target="#recipeModal"
+        data-bs-target="#recipeDetails"
       >
         Detail
       </button>
       {/* <!-- Modal --> */}
       <div
         className="modal fade"
-        id="recipeModal"
+        id="recipeDetails"
         tabIndex="-1"
-        aria-labelledby="recipeModalLabel"
+        aria-labelledby="recipeDetailsLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="recipeModalLabel">
+              <h5 className="modal-title" id="recipeDetailsLabel">
                 Ingredients
               </h5>
               <button
@@ -32,8 +46,8 @@ function RecipeModal({ingredients}) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">
-              MODAL BODY
+            <div className="modal-body">MODAL BODY
+              
             </div>
             <div className="modal-footer">
               <button
@@ -54,4 +68,4 @@ function RecipeModal({ingredients}) {
   );
 }
 
-export default RecipeModal;
+export default RecipeDetails;
