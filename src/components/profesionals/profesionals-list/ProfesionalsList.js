@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Profesional from "../profesional/Profesional";
-import profesionalsService from "../../../services/profesionals-service"
+import { ProfesionalContext } from "../../../contexts/ProfesionalContext"
 
 function ProfesionalsList() {
-  const [ profesionals, setProfesionals ] = useState(null)
+  
+  const profesionalsContext = useContext(ProfesionalContext)
 
-  useEffect(() => {
-    profesionalsService.list()
-      .then(data => setProfesionals(data))
-      .catch(error => console.log(error))
-  }, [])
+  const { profesionals } = profesionalsContext;
+
+  console.log("Profesionals", profesionals)
+
+  console.log("Profesionals List!")
 
   return (
     <div className="container mt-5">

@@ -9,37 +9,44 @@ import RecipeDetails from "./components/recipes/recipe-details/RecipeDetails";
 import RecipesList from "./components/recipes/recipes-list/RecipesList";
 import RestaurantsList from "./components/restaurants/restaurants-list/RestaurantsList";
 import ShopsList from "./components/shops/shops-list/ShopsList";
+import { ProductContextProvider } from "./contexts/ProductContext";
+import { ProfesionalContextProvider } from "./contexts/ProfesionalContext";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    
+      <div className="App">
+        <Navbar />
 
-      <Switch>
-        {/* Home */}
-        <Route exact path="/home" component={Home} />
+        <Switch>
+          {/* Home */}
+          <Route exact path="/home" component={Home} />
 
-        {/* Products */}
-        <Route exact path="/products" component={ProductsList} />
+          {/* Products */}
+          <ProductContextProvider>
+            <Route exact path="/products" component={ProductsList} />
+          </ProductContextProvider>
 
-        {/* Profesionals */}
-        <Route exact path="/profesionals" component={ProfesionalsList} />
+          {/* Profesionals */}
+          <ProfesionalContextProvider>
+          <Route exact path="/profesionals" component={ProfesionalsList} />
+          </ProfesionalContextProvider>
+          {/* Recipes */}
+          <Route exact path="/recipes" component={RecipesList} />
 
-        {/* Recipes */}
-        <Route exact path="/recipes" component={RecipesList} />
+          <Route exact path="/recipes/:id" component={RecipeDetails} />
 
-        <Route exact path="/recipes/:id" component={RecipeDetails} />
+          {/* Restaurants */}
+          <Route exact path="/restaurants" component={RestaurantsList} />
 
-        {/* Restaurants */}
-        <Route exact path="/restaurants" component={RestaurantsList} />
+          {/* Shops */}
+          <Route exact path="/shops" component={ShopsList} />
 
-        {/* Shops */}
-        <Route exact path="/shops" component={ShopsList} />
-
-        {/* Regist/Login */}
-        <Route exact path="/login" component={Regist} />
-      </Switch>
-    </div>
+          {/* Regist/Login */}
+          <Route exact path="/login" component={Regist} />
+        </Switch>
+      </div>
+    
   );
 }
 

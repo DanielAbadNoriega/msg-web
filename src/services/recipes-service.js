@@ -1,16 +1,15 @@
-import http from './base-api-service'
+import http from "./base-api-service";
 
-const list = () => http.get('/recipes')
+const list = () => http.get("/recipes");
 
-const detail = (id) => http.get(`/recipes/${id}`)
+const detail = (id) => http.get(`/recipes/${id}`);
 
-const remove = (id) => http.delete(`/recipes/${id}`)
-
+const remove = (id) => http.delete(`/recipes/${id}`);
 
 const service = {
   list,
   detail,
-  remove
-}
+  remove,
+};
 
 export default service;

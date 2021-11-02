@@ -23,4 +23,4 @@ function Product({ name, nutritionPerHundred }) {
   );
 }
 
-export default Product;
+export default Product

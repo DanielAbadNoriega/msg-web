@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import Product from "../product/Product";
 import ProductsFilter from "../products-filter/ProductsFilter";
-import productsService from "../../../services/products-service";
+import { ProductContext } from '../../../contexts/ProductContext'
+
 
 function ProductsList() {
-  const [products, setProducts] = useState(null);
   const [tag, setTag] = useState("");
 
-  useEffect(() => {
-    productsService
-      .list()
-      .then((data) => setProducts(data))
-      .catch((error) => console.error(error));
-  }, []);
+  const productsContext = useContext(ProductContext)
+
+  const { products } = productsContext;
 
   const filter = (tag) => {
     setTag(tag);
   };
-  console.log(products)
+
   return (
     <div className="container mt-5">
       <div className="row col-12">
