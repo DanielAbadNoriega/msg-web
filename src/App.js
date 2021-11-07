@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router";
 import "./App.css";
 import Home from "./components/misc/home/Home";
-import Regist from "./components/misc/regist/Regist";
+import Regist from "./components/misc/registration/regist/Regist";
 import Navbar from "./components/navbar/Navbar";
 import ProductsList from "./components/products/products-list/ProductsList";
 import ProfesionalsList from "./components/profesionals/profesionals-list/ProfesionalsList";
@@ -9,8 +9,7 @@ import RecipeDetails from "./components/recipes/recipe-details/RecipeDetails";
 import RecipesList from "./components/recipes/recipes-list/RecipesList";
 import RestaurantsList from "./components/restaurants/restaurants-list/RestaurantsList";
 import ShopsList from "./components/shops/shops-list/ShopsList";
-import { ProductContextProvider } from "./contexts/ProductContext";
-import { ProfesionalContextProvider } from "./contexts/ProfesionalContext";
+
 
 function App() {
   return (
@@ -23,14 +22,12 @@ function App() {
           <Route exact path="/home" component={Home} />
 
           {/* Products */}
-          <ProductContextProvider>
-            <Route exact path="/products" component={ProductsList} />
-          </ProductContextProvider>
+
+          <Route exact path="/products" component={ProductsList} />
 
           {/* Profesionals */}
-          <ProfesionalContextProvider>
           <Route exact path="/profesionals" component={ProfesionalsList} />
-          </ProfesionalContextProvider>
+
           {/* Recipes */}
           <Route exact path="/recipes" component={RecipesList} />
 
@@ -44,6 +41,7 @@ function App() {
 
           {/* Regist/Login */}
           <Route exact path="/login" component={Regist} />
+
         </Switch>
       </div>
     

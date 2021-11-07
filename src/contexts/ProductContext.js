@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from "react";
-import productsService from "../services/products-service";
+import React, { useState } from "react";
 
 export const ProductContext = React.createContext();
 
 export function ProductContextProvider(props) {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    productsService
-      .list()
-      .then((data) => setProducts(data))
-      .catch((error) => console.error(error));
-  }, []);
+  function addProducts(product) {
+    setProducts(prev => [...prev, product])
+  }
 
   const value = {
     products: products,
+    addProducts: addProducts,
   };
 
   return (

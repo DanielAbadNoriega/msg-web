@@ -2,7 +2,7 @@ import Rating from "../../rating/Rating";
 import RecipeDetails from "../recipe-details/RecipeDetails";
 import "./Recipe.css";
 
-function Recipe({ name, image, id, onDelete, ...recipe }) {
+function Recipe({ name, image, id, steps, onDelete, ...recipe }) {
   return (
     <div className=" card me-4 shadow p-3 mb-5 col-12">
       <img
@@ -18,7 +18,7 @@ function Recipe({ name, image, id, onDelete, ...recipe }) {
       </div>
       <Rating />
       {/* Prueba Modal */}
-      <RecipeDetails recipeId={id} />
+      <RecipeDetails {...steps} />
       {/* Delete */}
       <i
         style={{ color: "red" }}

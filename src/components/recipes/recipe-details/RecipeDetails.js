@@ -1,18 +1,14 @@
-import { useState, useEffect } from "react";
-import recipesService from "../../../services/recipes-service";
-
-function RecipeDetails(recipeId) {
+function RecipeDetails(steps) {
   
-  const [recipe, setRecipe] = useState();
+  function stepByStep(elements) {
+    for (let i = 0; i <= elements.length; i++) {
+      console.log(elements[i]);
+    }
+  }
 
-  useEffect(() => {
-    recipesService
-      .detail(recipeId.recipeId)
-      .then((recipe) => setRecipe(recipe))
-      .catch((error) => console.error(error));
-  },[recipeId.recipeId]);
+  console.log(stepByStep(steps))
+  console.log(steps)
 
-  
   return (
     <div>
       {/* Prueba Modal */}
@@ -37,7 +33,7 @@ function RecipeDetails(recipeId) {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="recipeDetailsLabel">
-                Ingredients
+                Name
               </h5>
               <button
                 type="button"
@@ -46,9 +42,7 @@ function RecipeDetails(recipeId) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">MODAL BODY
-              
-            </div>
+            <div className="modal-body"></div>
             <div className="modal-footer">
               <button
                 type="button"

@@ -1,29 +1,28 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect} from "react";
 import Profesional from "../profesional/Profesional";
-import { ProfesionalContext } from "../../../contexts/ProfesionalContext"
+import profesionalsService from "../../../services/profesionals-service"
 
 function ProfesionalsList() {
-  
-  const profesionalsContext = useContext(ProfesionalContext)
+  const [ profesionals, setProfesionals ] = useState(null)
 
-  const { profesionals } = profesionalsContext;
-
-  console.log("Profesionals", profesionals)
-
-  console.log("Profesionals List!")
+  useEffect(() => {
+    profesionalsService.list()
+      .then(data => setProfesionals(data))
+      .catch(error => console.error(error))
+  }, [])
 
   return (
-    <div className="container mt-5">
-      <h3 className="text-white">Profesionals List</h3>
-      <div className="row">
-        {profesionals && profesionals.map(profesional => (
-          <Profesional 
-            key={profesional.id}
-            {...profesional}
-          />
-        ))}
+    
+      <div className="container mt-5">
+        <h3 className="text-white">Profesionals List</h3>
+        <div className="row">
+          {profesionals &&
+            profesionals.map((profesional) => (
+              <Profesional key={profesional.id} {...profesional} />
+            ))}
+        </div>
       </div>
-    </div>
+    
   );
 }
 

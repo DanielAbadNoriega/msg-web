@@ -1,15 +1,22 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Product from "../product/Product";
 import ProductsFilter from "../products-filter/ProductsFilter";
-import { ProductContext } from '../../../contexts/ProductContext'
-
+import productsService from "../../../services/products-service";
+/* import { useContext } from "react";
+import { ProductContext } from "../../../contexts/ProductContext"; */
 
 function ProductsList() {
+  const [products, setProducts] = useState(null);
   const [tag, setTag] = useState("");
 
-  const productsContext = useContext(ProductContext)
+  //const productsContext = useContext(ProductContext);
 
-  const { products } = productsContext;
+  useEffect(() => {
+    productsService
+      .list()
+      .then((data) => setProducts(data))
+      .catch((error) => console.error(error));
+  }, []);
 
   const filter = (tag) => {
     setTag(tag);
