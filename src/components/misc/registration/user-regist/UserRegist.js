@@ -1,4 +1,50 @@
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import usersService from "../../../../services/users-service";
+
 function UserRegist() {
+  const [user, setUser] = useState(null);
+  const [errors, setErrors] = useState(null);
+
+  const history = useHistory();
+
+  const handleInputChange = (event) => {
+    setUser({
+      ...user,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    usersService
+      .create(user)
+      .then(() => history.push("/login"))
+      .catch((error) => {
+        const { errors, message } = error.response?.data || error;
+        console.error("Error message: ",message);
+
+        setErrors({
+          name: errors ? undefined : message,
+          lastname: errors ? undefined : message,
+          email: errors ? undefined : message,
+          phone: errors ? undefined : message,
+          avatar: errors ? undefined : message,
+          address: errors ? undefined : message,
+          password: errors ? undefined : message,
+          ...errors,
+        });
+
+        console.error("Errors: ", errors)
+      });
+  };
+
+  if(errors) {
+    console.error("Errors: ", errors)
+  }
+
+  console.log(user);
+
   return (
     <>
       {/* Form */}
@@ -7,12 +53,13 @@ function UserRegist() {
           background: "linear-gradient(to bottom left, #01f4dd, #009688)",
         }}
         className="container col-6"
+        onSubmit={handleSubmit}
       >
         {/* Name */}
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label"
+            className="form-label text-white"
             aria-hidden="true"
           >
             Name
@@ -26,9 +73,12 @@ function UserRegist() {
             </span>
             <input
               type="text"
+              name="name"
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="Name"
+              onChange={handleInputChange}
               required
             />
             <div className="invalid-tooltip">
@@ -39,7 +89,10 @@ function UserRegist() {
 
         {/* LastName */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label text-white"
+          >
             LastName
           </label>
           <div className="input-group has-validation">
@@ -51,9 +104,12 @@ function UserRegist() {
             </span>
             <input
               type="text"
+              name="lastname"
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="Lastname"
+              onChange={handleInputChange}
               required
             />
             <div className="invalid-tooltip">
@@ -64,7 +120,10 @@ function UserRegist() {
 
         {/* Email */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label text-white"
+          >
             Email
           </label>
           <div className="input-group has-validation">
@@ -76,9 +135,12 @@ function UserRegist() {
             </span>
             <input
               type="text"
+              name="email"
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="e-mail@example.com"
+              onChange={handleInputChange}
               required
             />
             <div className="invalid-tooltip">
@@ -89,7 +151,10 @@ function UserRegist() {
 
         {/* Phone */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label text-white"
+          >
             Phone
           </label>
           <div className="input-group has-validation">
@@ -101,9 +166,12 @@ function UserRegist() {
             </span>
             <input
               type="text"
+              name="phone"
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="xxx-xxx-xxx"
+              onChange={handleInputChange}
               required
             />
             <div className="invalid-tooltip">
@@ -114,7 +182,10 @@ function UserRegist() {
 
         {/* Avatar */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label text-white"
+          >
             Avatar
           </label>
           <div className="input-group has-validation">
@@ -126,10 +197,12 @@ function UserRegist() {
             </span>
             <input
               type="text"
+              name="avatar"
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
-              required
+              placeholder="Image here"
+              onChange={handleInputChange}
             />
             <div className="invalid-tooltip">
               Please choose a unique and valid username.
@@ -141,7 +214,7 @@ function UserRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label col-1"
+            className="form-label text-white col-1"
           >
             Address
           </label>
@@ -155,9 +228,12 @@ function UserRegist() {
             </span>
             <input
               type="text"
+              name="address"
               className="form-control col-4"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="C/Example..."
+              onChange={handleInputChange}
               required
             />
             <div className="invalid-tooltip">
@@ -168,7 +244,10 @@ function UserRegist() {
 
         {/* Password */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label text-white"
+          >
             Password
           </label>
           <div className="input-group has-validation">
@@ -179,16 +258,27 @@ function UserRegist() {
               <i className="fa fa-lock fa-fw" aria-hidden="true"></i>
             </span>
             <input
-              type="text"
+              type="password"
+              name="password"
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="********"
+              onChange={handleInputChange}
               required
             />
             <div className="invalid-tooltip">
               Please choose a unique and valid username.
             </div>
           </div>
+        </div>
+        <div className="container col-5 p-2">
+          <button
+            type="submit"
+            className="btn btn-success text-white ms-5 mb-3 mt-3 col-5"
+          >
+            Regist
+          </button>
         </div>
       </form>
     </>

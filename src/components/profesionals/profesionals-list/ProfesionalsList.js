@@ -14,7 +14,7 @@ function ProfesionalsList() {
   return (
     
       <div className="container mt-5">
-        <h3 className="text-white">Profesionals List</h3>
+        <h3>Profesionals</h3>
         <div className="row">
           {profesionals &&
             profesionals.map((profesional) => (

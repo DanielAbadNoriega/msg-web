@@ -1,14 +1,4 @@
-function RecipeDetails(steps) {
-  
-  function stepByStep(elements) {
-    for (let i = 0; i <= elements.length; i++) {
-      console.log(elements[i]);
-    }
-  }
-
-  console.log(stepByStep(steps))
-  console.log(steps)
-
+function RecipeDetails({ name, steps }) {
   return (
     <div>
       {/* Prueba Modal */}
@@ -33,7 +23,7 @@ function RecipeDetails(steps) {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="recipeDetailsLabel">
-                Name
+                {name}
               </h5>
               <button
                 type="button"
@@ -42,7 +32,11 @@ function RecipeDetails(steps) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body"></div>
+            <div className="modal-body">
+              {steps.map((step) => (
+                <p key={name}>{step}</p>
+              ))}
+            </div>
             <div className="modal-footer">
               <button
                 type="button"

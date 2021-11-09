@@ -67,11 +67,15 @@ function RecipesList() {
             ) : (
               recipes.length !== 0 &&
               recipes.map((recipe) => (
-                <Recipe
+                <div
                   key={recipe.id}
-                  {...recipe}
-                  onDelete={() => handleDeleteRecipe(recipe.id)} //Aquí modificar para usuarios ADMIN
-                />
+                  className="card mb-3 shadow p-3 mb-5"
+                >
+                  <Recipe
+                    {...recipe}
+                    onDelete={() => handleDeleteRecipe(recipe.id)} //Aquí modificar para usuarios ADMIN
+                  />
+                </div>
               ))
             )}
           </div>

@@ -1,34 +1,30 @@
 import Rating from "../../rating/Rating";
-import RecipeDetails from "../recipe-details/RecipeDetails";
+/* import RecipeDetails from "../recipe-details/RecipeDetails"; */
 import "./Recipe.css";
 
 function Recipe({ name, image, id, steps, onDelete, ...recipe }) {
   return (
-    <div className=" card me-4 shadow p-3 mb-5 col-12">
-      <img
-        src={image}
-        className="card-img-top rounded shadow-lg p-0  h-100 w-100"
-        alt={image}
-      />
-      <div className="card-body">
-        <p className="card-text">
-          <b>Name: </b>
-          {name}
-        </p>
+    <>
+      <div className="row g-0">
+        <div className="col-md-4 col-lg-12">
+          <img
+            src={image}
+            className="img-fluid rounded-start shadow-sm p-3 mb-2"
+            alt={image}
+          />
+        </div>
+        <div className="col-md-8 col-lg-12">
+          <div className="card-body">
+            <h3 className="card-title">{name}</h3>
+            <p className="card-text">
+              <b>Steps: </b>
+              <small className="text-muted">{steps}</small>
+            </p>
+            <Rating />
+          </div>
+        </div>
       </div>
-      <Rating />
-      {/* Prueba Modal */}
-      <RecipeDetails {...steps} />
-      {/* Delete */}
-      <i
-        style={{ color: "red" }}
-        className="fa fa-trash-o fa-fw mt-2 me-2"
-        aria-hidden="true"
-        role="button"
-        onClick={() => onDelete(id)}
-      ></i>{" "}
-      {/* Modificar para que solo sea posible si ADMIN */}
-    </div>
+    </>
   );
 }
 

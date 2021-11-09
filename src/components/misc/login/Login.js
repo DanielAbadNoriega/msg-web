@@ -10,7 +10,7 @@ function Login() {
       >
         {/* Email */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label htmlFor="validationTooltipUsername" className="form-label text-white" >
             Email
           </label>
           <div className="input-group has-validation">
@@ -25,6 +25,7 @@ function Login() {
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="e-mail@example.com"
               required
             />
             <div className="invalid-tooltip">
@@ -35,7 +36,7 @@ function Login() {
 
         {/* Password */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label">
+          <label htmlFor="validationTooltipUsername" className="form-label text-white">
             Password
           </label>
           <div className="input-group has-validation">
@@ -50,6 +51,7 @@ function Login() {
               className="form-control"
               id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
+              placeholder="********"
               required
             />
             <div className="invalid-tooltip">

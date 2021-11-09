@@ -23,8 +23,6 @@ function ProductDetail(nutritionPerHundred) {
     magnesium,
   } = nutritionPerHundred
 
-  console.log(nutritionPerHundred)
-
   const handleClick = (event) => {
     setShow(!show);
     setTarget(event.target);

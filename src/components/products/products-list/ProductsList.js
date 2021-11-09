@@ -2,14 +2,10 @@ import React, { useState, useEffect } from "react";
 import Product from "../product/Product";
 import ProductsFilter from "../products-filter/ProductsFilter";
 import productsService from "../../../services/products-service";
-/* import { useContext } from "react";
-import { ProductContext } from "../../../contexts/ProductContext"; */
 
 function ProductsList() {
   const [products, setProducts] = useState(null);
   const [tag, setTag] = useState("");
-
-  //const productsContext = useContext(ProductContext);
 
   useEffect(() => {
     productsService
@@ -25,7 +21,7 @@ function ProductsList() {
   return (
     <div className="container mt-5">
       <div className="row col-12">
-        <h3 className="text-white">Products List</h3>
+        <h3>Products</h3>
         <ProductsFilter onFilter={filter} />
       </div>
       <div className="row col-12">
