@@ -15,7 +15,7 @@ function ProfesionalRegist() {
             className="form-label text-white"
             aria-hidden="true"
           >
-            Name
+            Profesional`s name
           </label>
           <div className="input-group has-validation">
             <span
@@ -40,7 +40,10 @@ function ProfesionalRegist() {
 
         {/* Email */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label  text-white">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label  text-white"
+          >
             Email
           </label>
           <div className="input-group has-validation">
@@ -66,7 +69,10 @@ function ProfesionalRegist() {
 
         {/* Phone */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label  text-white">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label  text-white"
+          >
             Phone
           </label>
           <div className="input-group has-validation">
@@ -92,7 +98,10 @@ function ProfesionalRegist() {
 
         {/* Avatar */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label  text-white">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label  text-white"
+          >
             Avatar
           </label>
           <div className="input-group has-validation">
@@ -178,7 +187,10 @@ function ProfesionalRegist() {
 
         {/* Password */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label text-white">
+          <label
+            htmlFor="validationTooltipUsername"
+            className="form-label text-white"
+          >
             Password
           </label>
           <div className="input-group has-validation">
@@ -200,6 +212,14 @@ function ProfesionalRegist() {
               Please choose a unique and valid username.
             </div>
           </div>
+        </div>
+        <div className="container col-5 p-2">
+          <button
+            type="submit"
+            className="btn btn-success text-white ms-5 mb-3 mt-3 col-5"
+          >
+            Regist
+          </button>
         </div>
       </form>
     </>

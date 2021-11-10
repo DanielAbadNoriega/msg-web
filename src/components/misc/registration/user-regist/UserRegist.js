@@ -22,7 +22,7 @@ function UserRegist() {
       .then(() => history.push("/login"))
       .catch((error) => {
         const { errors, message } = error.response?.data || error;
-        console.error("Error message: ",message);
+        console.error("Error message: ", message);
 
         setErrors({
           name: errors ? undefined : message,
@@ -35,15 +35,13 @@ function UserRegist() {
           ...errors,
         });
 
-        console.error("Errors: ", errors)
+        console.error("Errors: ", errors);
       });
   };
 
-  if(errors) {
-    console.error("Errors: ", errors)
+  if (errors) {
+    console.error("Errors: ", errors);
   }
-
-  console.log(user);
 
   return (
     <>
@@ -62,20 +60,16 @@ function UserRegist() {
             className="form-label text-white"
             aria-hidden="true"
           >
-            Name
+            Firstname
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text">
               <i className="fa fa-id-card fa-fw" aria-hidden="true"></i>
             </span>
             <input
               type="text"
               name="name"
               className="form-control"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="Name"
               onChange={handleInputChange}
@@ -96,17 +90,13 @@ function UserRegist() {
             LastName
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text">
               <i className="fa fa-id-card fa-fw" aria-hidden="true"></i>
             </span>
             <input
               type="text"
               name="lastname"
               className="form-control"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="Lastname"
               onChange={handleInputChange}
@@ -127,17 +117,13 @@ function UserRegist() {
             Email
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text">
               <i className="fa fa-envelope fa-fw" aria-hidden="true"></i>
             </span>
             <input
               type="text"
               name="email"
               className="form-control"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="e-mail@example.com"
               onChange={handleInputChange}
@@ -158,17 +144,13 @@ function UserRegist() {
             Phone
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text">
               <i className="fa fa-phone-square fa-fw" aria-hidden="true"></i>
             </span>
             <input
               type="text"
               name="phone"
               className="form-control"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="xxx-xxx-xxx"
               onChange={handleInputChange}
@@ -189,17 +171,13 @@ function UserRegist() {
             Avatar
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text">
               <i className="fa fa-user-circle" aria-hidden="true" />
             </span>
             <input
               type="text"
               name="avatar"
               className="form-control"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="Image here"
               onChange={handleInputChange}
@@ -219,18 +197,13 @@ function UserRegist() {
             Address
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              aria-hidden="true"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text" aria-hidden="true">
               <i className="fa fa-map-marker fa-fw" aria-hidden="true"></i>
             </span>
             <input
               type="text"
               name="address"
               className="form-control col-4"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="C/Example..."
               onChange={handleInputChange}
@@ -251,17 +224,13 @@ function UserRegist() {
             Password
           </label>
           <div className="input-group has-validation">
-            <span
-              className="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
+            <span className="input-group-text">
               <i className="fa fa-lock fa-fw" aria-hidden="true"></i>
             </span>
             <input
               type="password"
               name="password"
               className="form-control"
-              id="validationTooltipUsername"
               aria-describedby="validationTooltipUsernamePrepend"
               placeholder="********"
               onChange={handleInputChange}

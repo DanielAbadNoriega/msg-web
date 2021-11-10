@@ -59,7 +59,7 @@ function RecipesList() {
   ) : (
     recipes && (
       <div className="container mt-5 col-12">
-        <h3 className="text-black">Recipes List</h3>
+        <h3 className="text-black">Recipes</h3>
         <div className="row justify-content-center col-12">
           <div className="card col-4 border-0 bg-transparent">
             {loading ? (
