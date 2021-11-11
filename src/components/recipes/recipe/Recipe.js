@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Rating from "../../rating/Rating";
 /* import RecipeDetails from "../recipe-details/RecipeDetails"; */
 import "./Recipe.css";
@@ -21,6 +22,7 @@ function Recipe({ name, image, id, steps, onDelete, ...recipe }) {
               <small className="text-muted">{steps}</small>
             </p>
             <Rating />
+            <Link to={`/recipes/${id}`} className="stretched-link"/>
           </div>
         </div>
       </div>
