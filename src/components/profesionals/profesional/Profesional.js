@@ -32,8 +32,14 @@ function Profesional({ email, phone, avatar, company, id }) {
               <b>Email: </b>
               <small className="text-muted">{email}</small>
             </p>
+            <p className="card-text">
+              <small className="text-muted">Rating: </small>
+            </p>
             <Rating />
             <Link to={`/profesionals/${id}`} className="stretched-link" />
+            <p className="card-text">
+              <small className="text-muted">Click to more information. </small>
+            </p>
           </div>
         </div>
       </div>

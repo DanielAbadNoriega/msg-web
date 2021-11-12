@@ -8,7 +8,9 @@ import ProfesionalDetails from "./components/profesionals/profesional-details/Pr
 import ProfesionalsList from "./components/profesionals/profesionals-list/ProfesionalsList";
 import RecipeDetails from "./components/recipes/recipe-details/RecipeDetails";
 import RecipesList from "./components/recipes/recipes-list/RecipesList";
+import RestaurantDetails from "./components/restaurants/restaurant-details/RestaurantDetails";
 import RestaurantsList from "./components/restaurants/restaurants-list/RestaurantsList";
+import ShopDetails from "./components/shops/shop-details/ShopDetails";
 import ShopsList from "./components/shops/shops-list/ShopsList";
 
 
@@ -39,8 +41,12 @@ function App() {
           {/* Restaurants */}
           <Route exact path="/restaurants" component={RestaurantsList} />
 
+          <Route exact path="/restaurants/:id" component={RestaurantDetails} />
+
           {/* Shops */}
           <Route exact path="/shops" component={ShopsList} />
+
+          <Route exact path="/shops/:id" component={ShopDetails} />
 
           {/* Regist/Login */}
           <Route exact path="/login" component={Regist} />

@@ -17,8 +17,6 @@ function ProfesionalDetails() {
       .catch((error) => console.error(error));
   }, [id]);
 
-  console.log(profesional);
-
   if (profesional !== undefined) {
     return (
       <div
@@ -68,7 +66,7 @@ function ProfesionalDetails() {
               }
             </div>
             <Rating />
-            <Link to="/profesionals" className="btn btn-danger mb-2">
+            <Link to="/profesionals" className="btn btn-danger mt-2 mb-2">
               {" "}
               Back{" "}
             </Link>
