@@ -4,6 +4,7 @@ import Home from "./components/misc/home/Home";
 import Regist from "./components/misc/registration/regist/Regist";
 import Navbar from "./components/navbar/Navbar";
 import ProductsList from "./components/products/products-list/ProductsList";
+import ProfesionalDetails from "./components/profesionals/profesional-details/ProfesionalDetails";
 import ProfesionalsList from "./components/profesionals/profesionals-list/ProfesionalsList";
 import RecipeDetails from "./components/recipes/recipe-details/RecipeDetails";
 import RecipesList from "./components/recipes/recipes-list/RecipesList";
@@ -27,6 +28,8 @@ function App() {
 
           {/* Profesionals */}
           <Route exact path="/profesionals" component={ProfesionalsList} />
+          
+          <Route exact path="/profesionals/:id" component={ProfesionalDetails} />
 
           {/* Recipes */}
           <Route exact path="/recipes" component={RecipesList} />

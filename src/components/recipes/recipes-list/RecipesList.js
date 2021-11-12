@@ -60,26 +60,18 @@ function RecipesList() {
     recipes && (
       <div className="container mt-5 col-12">
         <h3 className="text-black">Recipes</h3>
-        <div className="row justify-content-center col-12">
-          <div className="card col-4 border-0 bg-transparent">
-            {loading ? (
-              <i className="fa fa-gear fa-spin"></i>
-            ) : (
-              recipes.length !== 0 &&
-              recipes.map((recipe) => (
-                <div
-                  key={recipe.id}
-                  className="card mb-3 shadow p-3 mb-5"
-                >
-                  <Recipe
-                    {...recipe}
-                    onDelete={() => handleDeleteRecipe(recipe.id)} //Aquí modificar para usuarios ADMIN
-                  />
-                </div>
-              ))
-            )}
-          </div>
-        </div>
+        {loading ? (
+          <i className="fa fa-gear fa-spin"></i>
+        ) : (
+          recipes.length !== 0 &&
+          recipes.map((recipe) => (
+            <Recipe
+              key={recipe.id}
+              {...recipe}
+              onDelete={() => handleDeleteRecipe(recipe.id)} //Aquí modificar para usuarios ADMIN
+            />
+          ))
+        )}
       </div>
     )
   );

@@ -1,25 +1,39 @@
+import { Link } from "react-router-dom";
 import Rating from "../../rating/Rating";
 
-function Profesional({ name, email, phone, avatar, address, company }) {
+function Profesional({ email, phone, avatar, company, id }) {
   //const { street, suite, city, zipcode } = address;
   return (
     <div className="card mb-3 shadow p-3 mb-5">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={avatar} className="img-fluid rounded-start shadow-sm p-3 mb-2" alt={avatar} />
+          <img
+            src={avatar}
+            className="img-fluid rounded-start shadow-lg p-1 mb-2 h-100"
+            alt={avatar}
+          />
         </div>
         <div className="col-md-8">
           <div className="card-body">
-            <h3 className="card-title">{company.name}</h3>
+            <h3 className="card-title mb-4">{company.name}</h3>
             <p className="card-text text-truncate">
               <b>Description: </b>
               {company.catchPhrase.trim()}
-            </p>            
+            </p>
             <p className="card-text">
               <b>About us: </b>
-              <small className="text-muted">{company.bs}</small>
+              {company.bs}
+            </p>
+            <p className="card-text">
+              <b>Phone: </b>
+              {phone}
+            </p>
+            <p className="card-text">
+              <b>Email: </b>
+              <small className="text-muted">{email}</small>
             </p>
             <Rating />
+            <Link to={`/profesionals/${id}`} className="stretched-link" />
           </div>
         </div>
       </div>
