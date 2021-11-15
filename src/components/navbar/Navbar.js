@@ -3,12 +3,14 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav         style={{
-      background: "linear-gradient(to bottom left, #01f4dd, #009688)",
-    }}
-    className="navbar navbar-expand-lg navbar-light">
+    <nav
+      style={{
+        background: "linear-gradient(to bottom left, #01f4dd, #009688)",
+      }}
+      className="navbar navbar-expand-lg navbar-light"
+    >
       <div className="container-fluid col-12">
-        <NavLink className="navbar-brand col-1 me-5" exact to="/">
+        <NavLink className="navbar-brand col-1 me-5" exact to="/home">
           Mejor Sin Gluten
         </NavLink>
 
