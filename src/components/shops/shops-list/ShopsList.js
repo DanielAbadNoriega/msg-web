@@ -13,7 +13,7 @@ function ShopsList() {
 
   return (
     <div className="container mt-5">
-      <h3>Shops</h3>
+      <h3 className="text-white">Shops</h3>
       <div className="row">
         {shops && shops.map((shop) => <Shop {...shop} key={shop.id} />)}
       </div>

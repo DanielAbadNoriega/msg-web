@@ -3,7 +3,7 @@ import Rating from "../../rating/Rating";
 
 function Recipe({ name, image, id, steps, onDelete, ...recipe }) {
   return (
-    <div className="card mb-3  shadow-lg p-1" style={{ maxwidth: " 540px" }}>
+    <div className="card mb-3  shadow-lg p-1" style={{ maxwidth: " 540px", backgroundColor:"##FFE7E2" }}>
       <div className="row g-0">
         <div className="col-md-4">
           <img
@@ -13,7 +13,7 @@ function Recipe({ name, image, id, steps, onDelete, ...recipe }) {
           />
         </div>
         <div className="col-md-8">
-          <div className="card-body">
+          <div className="card-body shadow-lg p-1 w-100 h-100" style={{color: "#37265F"}}>
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{steps}</p>
             <p className="card-text">

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Rating from "../../rating/Rating";
 
 function Profesional({ email, phone, avatar, company, id }) {
-  //const { street, suite, city, zipcode } = address;
+  
   return (
-    <div className="card mb-3 shadow p-3 mb-5">
+    <div className="card mb-3 shadow p-3 mb-5" style={{backgroundColor:"##F1E7DB"}}>
       <div className="row g-0">
         <div className="col-md-4">
           <img

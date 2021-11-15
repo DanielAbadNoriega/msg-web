@@ -14,7 +14,7 @@ function RestaurantsList() {
 
   return (
     <div className="container mt-5">
-      <h3>Restaurants</h3>
+      <h3 className="text-white">Restaurants</h3>
       <div className="row">
         {restaurants &&
           restaurants.map((restaurant) => (

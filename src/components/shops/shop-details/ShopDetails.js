@@ -16,13 +16,12 @@ function ShopDetails() {
       .then((data) => setShop(data))
       .catch((error) => console.error(error));
   }, [id]);
-  console.log(shop);
 
   if (shop !== undefined) {
     return (
       <div
         className="card mb-3 container shadow-lg mt-4 p-1"
-        style={{ maxwidth: "540px;" }}
+        style={{ maxwidth: "540px" }}
       >
         <div className="row g-0">
           <div className="col-md-4 shadow-lg p-0">

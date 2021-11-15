@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import restaurantsService from "../../../../services/restaurants-service";
 
 function RestaurantsCarousel() {
@@ -12,30 +13,15 @@ function RestaurantsCarousel() {
   }, []);
 
   return (
-    <div className="container mt-2 lg-col-12">
+    <div className="container mt-4 lg-col-12">
       {restaurants && (
         <>
-          <h2 className="text-center">Restaurants</h2>
+          <h2 className="text-center text-white">Restaurants</h2>
           <div
-            id="carouselExampleDark"
+            id="carouselRestaurants"
             className="carousel carousel-dark slide"
             data-bs-ride="carousel"
           >
-            <div className="carousel-indicators">
-              {/* Button down images */}
-              {restaurants &&
-                restaurants.map((restaurant, index) => (
-                  <button
-                    key={restaurant.id}
-                    type="button"
-                    data-bs-target="#carouselExampleDark"
-                    className="active"
-                    aria-current="true"
-                    data-bs-slide-to={index}
-                    aria-label={`Slide ${index + 1}`}
-                  ></button>
-                ))}
-            </div>
             {/* Sliders */}
             <div className="carousel-inner container">
               {/* --------------------------------------- */}
@@ -56,14 +42,36 @@ function RestaurantsCarousel() {
                       {restaurant.description}
                     </p>
                   </div>
+                  <Link
+                    to={`/restaurants/${restaurant.id}`}
+                    className="stretched-link"
+                  />
                 </div>
               ))}
             </div>
-            {/* Button next */}
+
+            {/* Button down images */}
+            <div className="carousel-indicators position-relative">
+              {restaurants &&
+                restaurants.map((restaurant, index) => (
+                  <button
+                    key={restaurant.id}
+                    type="button"
+                    data-bs-target="#carouselRestaurants"
+                    className="active bg-light"
+                    aria-current="true"
+                    data-bs-slide-to={index}
+                    aria-label={`Slide ${index + 1}`}
+                  ></button>
+                ))}
+            </div>
+
+            {/* Button prev/next */}
+            {/* Button prev */}
             <button
-              className="carousel-control-prev"
+              className="carousel-control-prev bg-light"
               type="button"
-              data-bs-target="#carouselExampleDark"
+              data-bs-target="#carouselRestaurants"
               data-bs-slide="prev"
             >
               <span
@@ -72,10 +80,11 @@ function RestaurantsCarousel() {
               ></span>
               <span className="visually-hidden">Previous</span>
             </button>
+            {/* Button next */}
             <button
-              className="carousel-control-next"
+              className="carousel-control-next bg-light"
               type="button"
-              data-bs-target="#carouselExampleDark"
+              data-bs-target="#carouselRestaurants"
               data-bs-slide="next"
             >
               <span

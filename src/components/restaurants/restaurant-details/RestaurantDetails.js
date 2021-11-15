@@ -18,8 +18,6 @@ function RestaurantDetails() {
       .catch((error) => console.error(error));
   }, [id]);
 
-  console.log(restaurant);
-
   if (restaurant !== undefined) {
     return (
       <div

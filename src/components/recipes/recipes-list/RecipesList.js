@@ -3,7 +3,7 @@ import Recipe from "../recipe/Recipe";
 import recipesService from "../../../services/recipes-service";
 
 function RecipesList() {
-  const [recipes, setRecipes] = useState(null);
+  const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errors, setErrors] = useState(null);
 
@@ -58,8 +58,8 @@ function RecipesList() {
     </div>
   ) : (
     recipes && (
-      <div className="container mt-5 col-12">
-        <h3 className="text-black">Recipes</h3>
+      <div className="container mt-5 col-12" style={{color: "#37265F"}}>
+        <h3>Recipes</h3>
         {loading ? (
           <i className="fa fa-gear fa-spin"></i>
         ) : (

@@ -4,13 +4,11 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav
-      style={{
-        background: "linear-gradient(to bottom left, #01f4dd, #009688)",
-      }}
       className="navbar navbar-expand-lg navbar-light"
+      style={{ color: "#37265F" }}
     >
       <div className="container-fluid col-12">
-        <NavLink className="navbar-brand col-1 me-5" exact to="/home">
+        <NavLink className="navbar-brand col-1 me-5 " exact to="/home">
           Mejor Sin Gluten
         </NavLink>
 
@@ -43,7 +41,11 @@ function Navbar() {
             >
               <i className="fa fa-bars fa-fw" aria-hidden="true"></i>
             </NavLink>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul
+              className="dropdown-menu"
+              style={{ color: "#37265F" }}
+              aria-labelledby="navbarDropdown"
+            >
               <li>
                 <NavLink className="dropdown-item" exact to="/products">
                   Products
