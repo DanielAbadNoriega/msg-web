@@ -46,7 +46,7 @@ function RestaurantRegist() {
       {/* Form */}
       <form
         style={{
-          background: "linear-gradient(to bottom left, #01f4dd, #009688)",
+          opacity:"0.8",
         }}
         className="container col-6"
         onSubmit={handleSubmit}
@@ -55,7 +55,7 @@ function RestaurantRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label text-white"
+            className="form-label "
             aria-hidden="true"
           >
             Restaurant`s name
@@ -83,7 +83,7 @@ function RestaurantRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label text-white"
+            className="form-label "
           >
             Description
           </label>
@@ -110,7 +110,7 @@ function RestaurantRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label text-white"
+            className="form-label "
           >
             Email
           </label>
@@ -137,7 +137,7 @@ function RestaurantRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label text-white"
+            className="form-label "
           >
             Avatar
           </label>
@@ -163,7 +163,7 @@ function RestaurantRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label text-white col-1"
+            className="form-label  col-1"
           >
             Address
           </label>
@@ -190,7 +190,7 @@ function RestaurantRegist() {
         <div className="container col-8 p-2">
           <label
             htmlFor="validationTooltipUsername"
-            className="form-label text-white"
+            className="form-label "
           >
             Password
           </label>
@@ -215,7 +215,7 @@ function RestaurantRegist() {
         <div className="container col-5 p-2">
           <button
             type="submit"
-            className="btn btn-success text-white ms-5 mb-3 mt-3 col-5"
+            className="btn btn-success  ms-5 mb-3 mt-3 col-5"
           >
             Regist
           </button>

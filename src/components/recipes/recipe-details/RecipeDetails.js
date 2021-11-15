@@ -16,12 +16,16 @@ function RecipeDetails() {
       .then((data) => setRecipe(data))
       .catch((error) => console.error(error));
   }, [id]);
-  
+
   if (recipe !== undefined) {
     return (
       <div
         className="card mb-3 container mt-4 shadow-lg p-1"
-        style={{ maxwidth: " 540px" }}
+        style={{
+          maxwidth: " 540px",
+          backgroundColor: "transparent",
+          color: "#37265F",
+        }}
       >
         <div className="row g-0">
           <div className="col-md-4 mt-4 col-lg-4">

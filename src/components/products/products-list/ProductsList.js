@@ -21,7 +21,7 @@ function ProductsList() {
   return (
     <div className="container mt-5">
       <div className="row col-12">
-        <h3 className="text-white">Products</h3>
+        <h3 style={{color: "#bea46d"}} >Products</h3>
         <ProductsFilter onFilter={filter} />
       </div>
       <div className="row col-12">

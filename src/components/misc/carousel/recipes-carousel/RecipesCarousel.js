@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import recipesService from "../../../../services/recipes-service";
+import "./RecipesCarousel.css"
 
 function RecipesCarousel() {
   const [recipes, setRecipes] = useState([]);
@@ -13,7 +14,7 @@ function RecipesCarousel() {
   }, []);
 
   return (
-    <div className="container mt-4 lg-col-12">
+    <div className="RecipesCarousel container mt-4 lg-col-12">
       {recipes && (
         <>
           <h2 className="text-center text-white">Recipes</h2>
@@ -33,7 +34,7 @@ function RecipesCarousel() {
                 >
                   <img
                     src={recipe.image}
-                    className="rounded d-block mx-auto shadow-lg p-1 w-50 h-75 mt-2"
+                    className="rounded d-block mx-auto shadow-lg p-1 mt-2"
                     alt={recipe.image}
                   />
                   <div className="carousel-caption d-none d-md-block">

@@ -4,13 +4,13 @@ function Login() {
       {/* Form */}
       <form
         style={{
-          background: "linear-gradient(to bottom left, #01f4dd, #009688)",
+          opacity:"0.8"
         }}
-        className="container col-6"
+        className="container col-6 bg-light"
       >
         {/* Email */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label text-white" >
+          <label htmlFor="validationTooltipUsername" className="form-label " >
             Email
           </label>
           <div className="input-group has-validation">
@@ -36,7 +36,7 @@ function Login() {
 
         {/* Password */}
         <div className="container col-8 p-2">
-          <label htmlFor="validationTooltipUsername" className="form-label text-white">
+          <label htmlFor="validationTooltipUsername" className="form-label ">
             Password
           </label>
           <div className="input-group has-validation">
