@@ -5,8 +5,8 @@ import "./Recipe.css";
 function Recipe({ name, image, id, steps, onDelete, ...recipe }) {
   return (
     <div
-      className="Recipe card mb-3 shadow-lg p-1"
-      style={{ maxwidth: "700px", backgroundColor: "transparent" }}
+      className="Recipe card mb-3 mt-4 shadow-lg p-1"
+      style={{ maxwidth: "700px", opacity:"0.8" }}
     >
       <div className="row g-0">
         <div className="col-md-4">

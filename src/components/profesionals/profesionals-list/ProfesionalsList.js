@@ -14,8 +14,8 @@ function ProfesionalsList() {
 
   return (
     <div className="container mt-5">
-      <h3 className="text-white">Profesionals</h3>
-      <div className="row">
+      <h3 className="text-center" style={{color: "#bea46d"}}>Profesionals</h3>
+      <div className="row mt-4">
         {profesionals &&
           profesionals.map((profesional) => (
             <Profesional key={profesional.id} {...profesional} />

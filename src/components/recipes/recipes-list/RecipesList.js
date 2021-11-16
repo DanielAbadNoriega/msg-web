@@ -58,8 +58,8 @@ function RecipesList() {
     </div>
   ) : (
     recipes && (
-      <div className="container mt-5 col-12" style={{color: "#37265F"}}>
-        <h3>Recipes</h3>
+      <div className="container mt-5 col-12 text-center" style={{color: "#bea46d"}}>
+        <h1>Recipes</h1>
         {loading ? (
           <i className="fa fa-gear fa-spin"></i>
         ) : (

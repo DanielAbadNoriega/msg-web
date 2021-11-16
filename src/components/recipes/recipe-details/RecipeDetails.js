@@ -23,7 +23,7 @@ function RecipeDetails() {
         className="card mb-3 container mt-4 shadow-lg p-1"
         style={{
           maxwidth: " 540px",
-          backgroundColor: "transparent",
+          opacity:"0.8",
           color: "#37265F",
         }}
       >

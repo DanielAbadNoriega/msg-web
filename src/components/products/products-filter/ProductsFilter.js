@@ -12,7 +12,7 @@ function ProductsFilter(props) {
     "superfood",
   ];
   return (
-    <div className="btn-group dropstart col-1" style={{ opacity:"0.8",color: "#37265F" }}>
+    <div className="btn-group dropstart col-1 mt-3 g-0" style={{ opacity:"0.8",color: "#37265F" }}>
       <button
         type="button"
         className="border btn dropdown-toggle"

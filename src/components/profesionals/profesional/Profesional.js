@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import Rating from "../../rating/Rating";
 
 function Profesional({ email, phone, avatar, company, id }) {
-  
   return (
-    <div className="card mb-3 shadow p-3 mb-5" style={{backgroundColor:"##F1E7DB"}}>
+    <div
+      className="card mb-3 shadow p-3 mb-5"
+      style={{ opacity: "0.8" }}
+    >
       <div className="row g-0">
         <div className="col-md-4">
           <img

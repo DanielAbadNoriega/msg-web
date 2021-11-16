@@ -20,11 +20,11 @@ function ProductsList() {
 
   return (
     <div className="container mt-5">
-      <div className="row col-12">
-        <h3 style={{color: "#bea46d"}} >Products</h3>
+      <div className="row col-12 mt-2 text-center">
+        <h1 style={{color: "#bea46d"}} className="g-0">Products</h1>
         <ProductsFilter onFilter={filter} />
       </div>
-      <div className="row col-12">
+      <div className="row col-12 mt-4">
         {products &&
           products
             .filter((product) => (tag ? product.tags === tag : product))

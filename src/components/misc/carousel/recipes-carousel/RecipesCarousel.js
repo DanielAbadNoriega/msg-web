@@ -29,7 +29,7 @@ function RecipesCarousel() {
               {recipes?.map((recipe, index) => (
                 <div
                   key={recipe.id}
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                  className={`carousel-item ${index === 0 ? "active" : ""} text-center`}
                   data-bs-interval={`${(index *= 1000)}`}
                 >
                   <img
@@ -39,7 +39,7 @@ function RecipesCarousel() {
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <h4 style={{ color: "#E0A500" }}>{recipe.name}</h4>
-                    <p className="text-white lh-sm text-truncate text-center">
+                    <p className="text-white lh-sm text-truncate">
                       {recipe.steps}
                     </p>
                   </div>

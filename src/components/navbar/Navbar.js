@@ -5,31 +5,12 @@ function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-lg bg-light navbar-light"
-      style={{opacity:"0.8", color: "#E0A500" }}
+      style={{ opacity: "0.8", color: "#E0A500" }}
     >
       <div className="container-fluid col-12">
-        <NavLink className="navbar-brand col-1 me-5 " exact to="/home">
-          Mejor Sin Gluten
-        </NavLink>
-
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          {/* Home */}
-          <li className="nav-item col-4 me-4">
-            <NavLink
-              className="nav-link"
-              aria-current="page"
-              exact
-              to="/home"
-              activeStyle={{
-                fontWeight: "bold",
-                color: "black",
-              }}
-            >
-              <i className="fa fa-home fa-fw" aria-hidden="true"></i>
-            </NavLink>
-          </li>
+        <ul className="navbar-nav me-auto ms-2 mb-2 mb-lg-0 col-2">
           {/* Dropdown */}
-          <li className="nav-item dropdown col-2 me-4">
+          <li className="nav-item dropdown col-1 me-4">
             <NavLink
               className="nav-link dropdown-toggle"
               exact
@@ -81,7 +62,25 @@ function Navbar() {
               </li>
             </ul>
           </li>
+          {/* Home */}
+          <li className="nav-item col-2 ms-4">
+            <NavLink
+              className="nav-link"
+              aria-current="page"
+              exact
+              to="/home"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "black",
+              }}
+            >
+              <i className="fa fa-home fa-fw" aria-hidden="true"></i>
+            </NavLink>
+          </li>
         </ul>
+        <NavLink className="navbar-brand lg-col-1 me-5 " exact to="/home">
+          Mejor Sin Gluten
+        </NavLink>
       </div>
     </nav>
   );

@@ -13,7 +13,7 @@ function ProfesionalsCarousel() {
   }, []);
 
   return (
-    <div className="container mt-5 lg-col-12">
+    <div className="container mt-5 lg-col-12 text-center">
       {profesionals && (
         <>
           <h2 className="text-center" style={{ color: "#E0A500" }}>
