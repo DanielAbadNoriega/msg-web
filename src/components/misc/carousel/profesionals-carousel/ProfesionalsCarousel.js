@@ -13,13 +13,15 @@ function ProfesionalsCarousel() {
   }, []);
 
   return (
-    <div className="container mt-4 lg-col-12">
+    <div className="container mt-5 lg-col-12">
       {profesionals && (
         <>
-          <h2 className="text-center text-white">Profesionals</h2>
+          <h2 className="text-center" style={{ color: "#E0A500" }}>
+            Profesionals
+          </h2>
           <div
             id="carouselProfesionals"
-            className="carousel carousel-dark slide"
+            className="carousel carousel-dark slide mt-5 mb-4"
             data-bs-ride="carousel"
           >
             {/* Sliders */}
@@ -37,7 +39,9 @@ function ProfesionalsCarousel() {
                     alt={profesional.avatar}
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h4 className="text-white">{profesional.company.name}</h4>
+                    <h4 style={{ color: "#E0A500" }}>
+                      {profesional.company.name}
+                    </h4>
                     <p className="text-white lh-sm text-truncate text-center">
                       {profesional.company.catchPhrase}
                     </p>
@@ -58,7 +62,8 @@ function ProfesionalsCarousel() {
                     key={profesional.id}
                     type="button"
                     data-bs-target="#carouselProfesionals"
-                    className="active bg-light"
+                    className="active"
+                    style={{ backgroundColor: "#B88700" }}
                     aria-current="true"
                     data-bs-slide-to={index}
                     aria-label={`Slide ${index + 1}`}

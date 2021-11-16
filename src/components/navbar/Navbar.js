@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light"
-      style={{ color: "#37265F" }}
+      className="navbar navbar-expand-lg bg-light navbar-light"
+      style={{opacity:"0.8", color: "#E0A500" }}
     >
       <div className="container-fluid col-12">
         <NavLink className="navbar-brand col-1 me-5 " exact to="/home">
@@ -43,7 +43,7 @@ function Navbar() {
             </NavLink>
             <ul
               className="dropdown-menu"
-              style={{ color: "#37265F" }}
+              style={{ color: "#E0A500" }}
               aria-labelledby="navbarDropdown"
             >
               <li>

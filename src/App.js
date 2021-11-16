@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router";
+import { Redirect, Route, Switch } from "react-router";
 import "./App.css";
 import Home from "./components/misc/home/Home";
 import Regist from "./components/misc/registration/regist/Regist";
@@ -50,6 +50,8 @@ function App() {
 
           {/* Regist/Login */}
           <Route exact path="/login" component={Regist} />
+
+          <Redirect to="/home" />
 
         </Switch>
       </div>

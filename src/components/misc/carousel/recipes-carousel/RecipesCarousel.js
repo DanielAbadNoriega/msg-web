@@ -14,13 +14,13 @@ function RecipesCarousel() {
   }, []);
 
   return (
-    <div className="RecipesCarousel container mt-4 lg-col-12">
+    <div className="RecipesCarousel container border-dark border-4 mt-5 lg-col-12">
       {recipes && (
         <>
-          <h2 className="text-center text-white">Recipes</h2>
+          <h2 className="text-center"  style={{ color: "#E0A500" }}>Recipes</h2>
           <div
             id="carouselRecipes"
-            className="carousel carousel-dark slide"
+            className="carousel carousel-dark slide mt-5 mb-4"
             data-bs-ride="carousel"
           >
             {/* Sliders */}
@@ -38,7 +38,7 @@ function RecipesCarousel() {
                     alt={recipe.image}
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h4 className="text-white">{recipe.name}</h4>
+                    <h4 style={{ color: "#E0A500" }}>{recipe.name}</h4>
                     <p className="text-white lh-sm text-truncate text-center">
                       {recipe.steps}
                     </p>
@@ -59,7 +59,8 @@ function RecipesCarousel() {
                     key={recipe.id}
                     type="button"
                     data-bs-target="#carouselRecipes"
-                    className="active bg-light"
+                    className="active"
+                    style={{ backgroundColor: "#B88700" }}
                     aria-current="true"
                     data-bs-slide-to={index}
                     aria-label={`Slide ${index + 1}`}

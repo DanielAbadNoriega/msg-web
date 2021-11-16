@@ -6,7 +6,7 @@ import ShopsCarousel from "../carousel/shops-carousel/ShopsCarousel";
 function Home() {
   return (
     <div className="container mt-2 lg-col-12">
-      <h1 className="text-white">Mejor Sin Gluten</h1>
+      <h1 className="mt-4">Mejor Sin Gluten</h1>
       <ProfesionalsCarousel />
       <RecipesCarousel />
       <RestaurantsCarousel />

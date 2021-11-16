@@ -13,13 +13,15 @@ function ShopsCarousel() {
   }, []);
 
   return (
-    <div className="container mt-4 lg-col-12">
+    <div className="container mt-5 lg-col-12">
       {shops && (
         <>
-          <h2 className="text-center text-white">Shops</h2>
+          <h2 className="text-center" style={{ color: "#E0A500" }}>
+            Shops
+          </h2>
           <div
             id="carouselShops"
-            className="carousel carousel-dark slide"
+            className="carousel carousel-dark slide mt-5 mb-4"
             data-bs-ride="carousel"
           >
             {/* Sliders */}
@@ -37,7 +39,7 @@ function ShopsCarousel() {
                     alt={shop.image}
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h4 className="text-white">{shop.title}</h4>
+                    <h4 style={{ color: "#E0A500" }}>{shop.title}</h4>
                     <p className="text-white lh-sm text-truncate text-center">
                       {shop.description}
                     </p>
@@ -55,7 +57,8 @@ function ShopsCarousel() {
                     key={shop.id}
                     type="button"
                     data-bs-target="#carouselShops"
-                    className="active bg-light"
+                    className="active"
+                    style={{ backgroundColor: "#B88700" }}
                     aria-current="true"
                     data-bs-slide-to={index}
                     aria-label={`Slide ${index + 1}`}
