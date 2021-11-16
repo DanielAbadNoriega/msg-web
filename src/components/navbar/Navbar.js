@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logout from "../misc/logout/Logout";
 
 function Navbar() {
   return (
@@ -59,6 +60,10 @@ function Navbar() {
                 <NavLink className="dropdown-item" exact to="/login">
                   Login
                 </NavLink>
+              </li>
+              {/* Logout */}
+              <li className="text-center">
+                <Logout />
               </li>
             </ul>
           </li>

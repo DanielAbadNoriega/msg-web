@@ -55,16 +55,16 @@ function Regist() {
   return (
     <div
       className="container border-1 mt-5 bg-light"
-      style={{ opacity: "0.9", color: "#dfd3b9" }}
+      style={{ opacity: "0.9", color: "#E0A500" }}
     >
       {/*Nav Tab */}
-      <ul className="nav nav-tabs" style={{ color: "#dfd3b9" }}>
+      <ul className="nav nav-tabs" style={{ color: "#E0A500" }}>
         {/* Login */}
         <li className="nav-item">
           <button
             name="User"
             className="btn"
-            style={{ color: "#dfd3b9" }}
+            style={{ color: "#E0A500" }}
             onClick={() => handleLoginChange()}
           >
             Login
@@ -76,7 +76,7 @@ function Regist() {
           <button
             name="User"
             className="btn"
-            style={{ color: "#dfd3b9" }}
+            style={{ color: "#E0A500" }}
             onClick={() => handleUserChange()}
           >
             User
@@ -88,7 +88,7 @@ function Regist() {
           <button
             name="User"
             className="btn"
-            style={{ color: "#dfd3b9" }}
+            style={{ color: "#E0A500" }}
             onClick={() => handleProfesionalChange()}
           >
             Profesional
@@ -100,7 +100,7 @@ function Regist() {
           <button
             name="User"
             className="btn"
-            style={{ color: "#dfd3b9" }}
+            style={{ color: "#E0A500" }}
             onClick={() => handleRestaurantChange()}
           >
             Restaurant
@@ -112,7 +112,7 @@ function Regist() {
           <button
             name="User"
             className="btn"
-            style={{ color: "#dfd3b9" }}
+            style={{ color: "#E0A500" }}
             onClick={() => handleShopChange()}
           >
             Shop
