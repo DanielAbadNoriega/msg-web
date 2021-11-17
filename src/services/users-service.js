@@ -6,10 +6,13 @@ const login = (email, password) => http.post("/login", {email, password})
 
 const logout = () => http.post("/logout")
 
+const getUser = (id) => http.get(`/profile/${id}`)
+
 const service = {
   create,
   login,
-  logout
+  logout,
+  getUser
 };
 
 export default service;

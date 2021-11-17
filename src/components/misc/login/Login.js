@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useHistory } from "react-router";
+import { AuthContext } from "../../../contexts/AuthContext";
 import userService from "../../../services/users-service";
 
 function Login() {
+  const history = useHistory();
+  const auth = useContext(AuthContext)
   const [data, setData] = useState({
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState(null);
+  const [warning, setWarning] = useState(null);
 
-  const history = useHistory();
+
 
   const handleChange = (ev) => {
     setData({
@@ -23,11 +26,19 @@ function Login() {
 
     userService
       .login(data.email, data.password)
-      .then(() => {
+      .then((user) => {
         history.push("/");
-        console.log(data);
+        auth.login(user)
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        const { errors, message } = error.response?.data || error;
+
+        setWarning({
+          errors: errors,
+          message: message,
+          ...warning,
+        });
+      });
   };
 
   return (
@@ -105,16 +116,15 @@ function Login() {
             Regist
           </button>
         </div>
-        {errors && (
+        {warning && (
           <div className="alert alert-danger text-center" role="alert">
             <i
               className="fa fa-exclamation-triangle fa-fw"
               aria-hidden="true"
             />
-            {errors.message}
-            {errors.error}
-            {errors.email}
-            {console.log(errors)}
+            {warning.errors?.email}
+            <br />
+            {warning.message}
           </div>
         )}
       </form>
