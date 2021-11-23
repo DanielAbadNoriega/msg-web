@@ -19,7 +19,10 @@ function UserRegist() {
     event.preventDefault();
     usersService
       .create(user)
-      .then(() => history.push("/login"))
+      .then(() => {
+        history.push("/login");
+        setUser(null);
+      })
       .catch((error) => {
         const { errors, message } = error.response?.data || error;
         console.error("Error message: ", message);
@@ -48,7 +51,7 @@ function UserRegist() {
       {/* Form */}
       <form
         style={{
-          opacity:"0.8",
+          opacity: "0.8",
         }}
         className="container col-6"
         onSubmit={handleSubmit}
@@ -83,10 +86,7 @@ function UserRegist() {
 
         {/* LastName */}
         <div className="container col-8 p-2">
-          <label
-            htmlFor="validationTooltipUsername"
-            className="form-label "
-          >
+          <label htmlFor="validationTooltipUsername" className="form-label ">
             LastName
           </label>
           <div className="input-group has-validation">
@@ -110,10 +110,7 @@ function UserRegist() {
 
         {/* Email */}
         <div className="container col-8 p-2">
-          <label
-            htmlFor="validationTooltipUsername"
-            className="form-label "
-          >
+          <label htmlFor="validationTooltipUsername" className="form-label ">
             Email
           </label>
           <div className="input-group has-validation">
@@ -137,10 +134,7 @@ function UserRegist() {
 
         {/* Phone */}
         <div className="container col-8 p-2">
-          <label
-            htmlFor="validationTooltipUsername"
-            className="form-label "
-          >
+          <label htmlFor="validationTooltipUsername" className="form-label ">
             Phone
           </label>
           <div className="input-group has-validation">
@@ -164,10 +158,7 @@ function UserRegist() {
 
         {/* Avatar */}
         <div className="container col-8 p-2">
-          <label
-            htmlFor="validationTooltipUsername"
-            className="form-label "
-          >
+          <label htmlFor="validationTooltipUsername" className="form-label ">
             Avatar
           </label>
           <div className="input-group has-validation">
@@ -217,10 +208,7 @@ function UserRegist() {
 
         {/* Password */}
         <div className="container col-8 p-2">
-          <label
-            htmlFor="validationTooltipUsername"
-            className="form-label "
-          >
+          <label htmlFor="validationTooltipUsername" className="form-label ">
             Password
           </label>
           <div className="input-group has-validation">
